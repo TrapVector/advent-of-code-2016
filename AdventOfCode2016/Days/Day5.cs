@@ -54,26 +54,26 @@ namespace AdventOfCode2016.Days
 
         protected override void RunPart1( string InputFile )
         {
-            //Iteration = -1;
-            //
-            //var Characters = new ConcurrentDictionary<int, char>( Environment.ProcessorCount, 8 );
-            //
-            //var Threads = new List<Thread>( Environment.ProcessorCount );
-            //for( var i = 0; i < Environment.ProcessorCount; i++ )
-            //{
-            //    var WorkerThread = new Thread( FindCharacters );
-            //    WorkerThread.Start( Characters );
-            //
-            //    Threads.Add( WorkerThread );
-            //}
-            //
-            //foreach( var Thread in Threads )
-            //{
-            //    Thread.Join();
-            //}
-            //
-            //Console.Write( "Password = " );
-            //Console.WriteLine( Characters.OrderBy( p => p.Key ).Select( p => p.Value ).ToArray() );
+            Iteration = -1;
+            
+            var Characters = new ConcurrentDictionary<int, char>( Environment.ProcessorCount, 8 );
+            
+            var Threads = new List<Thread>( Environment.ProcessorCount );
+            for( var i = 0; i < Environment.ProcessorCount; i++ )
+            {
+                var WorkerThread = new Thread( FindCharacters );
+                WorkerThread.Start( Characters );
+            
+                Threads.Add( WorkerThread );
+            }
+            
+            foreach( var Thread in Threads )
+            {
+                Thread.Join();
+            }
+            
+            Console.Write( "Password = " );
+            Console.WriteLine( Characters.OrderBy( p => p.Key ).Select( p => p.Value ).ToArray() );
         }
 
         private static void FindCharactersPositions( object Context )
