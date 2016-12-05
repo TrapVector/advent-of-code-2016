@@ -18,7 +18,10 @@ namespace AdventOfCode2016
             Days.Day[] Days =
             {
                 new Days.Day1( "day1.txt" ),
-                new Days.Day2( "day2.txt" )
+                new Days.Day2( "day2.txt" ),
+                new Days.Day3( "day3.txt" ),
+                new Days.Day4( "day4.txt" ),
+                new Days.Day5()
             };
 
             for( int i = 0; i < Days.Length; i++ )
