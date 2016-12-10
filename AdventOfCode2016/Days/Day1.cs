@@ -59,8 +59,8 @@ namespace AdventOfCode2016.Days
             }
         }
 
-        public Day1( string InputFile )
-            : base( InputFile )
+        public Day1( string Input )
+            : base( Input )
         { }
 
         private Direction TurnLeft( Direction OriginalDirection )
@@ -87,9 +87,9 @@ namespace AdventOfCode2016.Days
             }
         }
 
-        protected override void RunPart1( string InputFile )
+        protected override void RunPart1( string Input )
         {
-            using( var Reader = new StreamReader( InputFile ) )
+            using( var Reader = new StreamReader( Input ) )
             {
                 var Data = Reader.ReadToEnd();
                 var Directives = Data.Split( new string[] { ", " }, StringSplitOptions.None );
@@ -112,9 +112,9 @@ namespace AdventOfCode2016.Days
             }
         }
 
-        protected override void RunPart2( string InputFile )
+        protected override void RunPart2( string Input )
         {
-            using( var Reader = new StreamReader( InputFile ) )
+            using( var Reader = new StreamReader( Input ) )
             {
                 var Data = Reader.ReadToEnd();
                 var Directives = Data.Split( new string[] { ", " }, StringSplitOptions.None );

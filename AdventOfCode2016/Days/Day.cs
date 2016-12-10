@@ -1,26 +1,52 @@
-﻿namespace AdventOfCode2016.Days
+﻿using System;
+
+namespace AdventOfCode2016.Days
 {
     public abstract class Day
     {
-        private string Part1InputFile;
-        private string Part2InputFile;
+        private string Part1Input;
+        private string Part2Input;
+        private bool ShouldRun;
 
-        public Day( string InputFile )
+        public Day( string Input, bool ShouldRun = true )
         {
-            Part1InputFile = InputFile;
-            Part2InputFile = InputFile;
+            Part1Input = Input;
+            Part2Input = Input;
+            this.ShouldRun = ShouldRun;
         }
 
-        public Day( string Part1InputFile, string Part2InputFile )
+        public Day( string Part1Input, string Part2Input, bool ShouldRun = true )
         {
-            this.Part1InputFile = Part1InputFile;
-            this.Part2InputFile = Part2InputFile;
+            this.Part1Input = Part1Input;
+            this.Part2Input = Part2Input;
+            this.ShouldRun = ShouldRun;
         }
 
-        public void RunPart1() { RunPart1( Part1InputFile ); }
-        public void RunPart2() { RunPart2( Part2InputFile ); }
+        public void RunPart1()
+        {
+            if( ShouldRun )
+            {
+                RunPart1( Part1Input );
+            }
+            else
+            {
+                Console.WriteLine( "Execution disabled..." );
+            }
+        }
 
-        protected abstract void RunPart1( string InputFile );
-        protected abstract void RunPart2( string InputFile );
+        public void RunPart2()
+        {
+            if( ShouldRun )
+            {
+                RunPart2( Part2Input );
+            }
+            else
+            {
+                Console.WriteLine( "Execution disabled..." );
+            }
+        }
+
+        protected abstract void RunPart1( string Input );
+        protected abstract void RunPart2( string Input );
     }
 }

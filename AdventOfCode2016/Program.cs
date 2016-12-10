@@ -21,7 +21,12 @@ namespace AdventOfCode2016
                 new Days.Day2( "day2.txt" ),
                 new Days.Day3( "day3.txt" ),
                 new Days.Day4( "day4.txt" ),
-                new Days.Day5()
+                new Days.Day5( "uqwqemis", false ),
+                new Days.Day6( "day6.txt" ),
+                new Days.Day7( "day7.txt" ),
+                new Days.Day8( "day8.txt" ),
+                new Days.Day9( "day9.txt" ),
+                new Days.Day10( "day10.txt" )
             };
 
             for( int i = 0; i < Days.Length; i++ )

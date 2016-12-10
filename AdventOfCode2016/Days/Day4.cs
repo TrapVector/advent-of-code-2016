@@ -10,8 +10,8 @@ namespace AdventOfCode2016.Days
 {
     public class Day4 : Day
     {
-        public Day4( string InputFile )
-            : base( InputFile )
+        public Day4( string Input )
+            : base( Input )
         { }
 
         private class Room
@@ -42,9 +42,9 @@ namespace AdventOfCode2016.Days
             }
         }
 
-        protected override void RunPart1( string InputFile )
+        protected override void RunPart1( string Input )
         {
-            using( var Reader = new StreamReader( InputFile ) )
+            using( var Reader = new StreamReader( Input ) )
             {
                 var SectorTotal = 0;
 
@@ -97,9 +97,9 @@ namespace AdventOfCode2016.Days
             return Room != null;
         }
 
-        protected override void RunPart2( string InputFile )
+        protected override void RunPart2( string Input )
         {
-            using( var Reader = new StreamReader( InputFile ) )
+            using( var Reader = new StreamReader( Input ) )
             {
                 while( !Reader.EndOfStream )
                 {

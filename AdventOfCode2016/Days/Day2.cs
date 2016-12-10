@@ -95,23 +95,23 @@ namespace AdventOfCode2016.Days
             }
         }
 
-        public Day2( string InputFile )
-            : base( InputFile )
+        public Day2( string Input )
+            : base( Input )
         { }
 
-        protected override void RunPart1( string InputFile )
+        protected override void RunPart1( string Inout )
         {
-            Console.WriteLine( "Key Code = {0}", FindKeyCode( InputFile, new PhoneKeyPad() ) );
+            Console.WriteLine( "Key Code = {0}", FindKeyCode( Inout, new PhoneKeyPad() ) );
         }
 
-        protected override void RunPart2( string InputFile )
+        protected override void RunPart2( string Input )
         {
-            Console.WriteLine( "Key Code = {0}", FindKeyCode( InputFile, new DiamondKeyPad() ) );
+            Console.WriteLine( "Key Code = {0}", FindKeyCode( Input, new DiamondKeyPad() ) );
         }
 
-        private static string FindKeyCode( string InputFile, IKeyPad KeyPad )
+        private static string FindKeyCode( string Input, IKeyPad KeyPad )
         {
-            using( var Reader = new StreamReader( InputFile ) )
+            using( var Reader = new StreamReader( Input ) )
             {
                 var Builder = new StringBuilder();
 

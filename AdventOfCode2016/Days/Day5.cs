@@ -11,8 +11,8 @@ namespace AdventOfCode2016.Days
 {
     public class Day5 : Day
     {
-        public Day5()
-            : base( "" )
+        public Day5( string Input, bool ShouldRun )
+            : base( Input, ShouldRun )
         { }
 
         private const string DOOR_ID = "uqwqemis";
@@ -52,7 +52,7 @@ namespace AdventOfCode2016.Days
             return true;
         }
 
-        protected override void RunPart1( string InputFile )
+        protected override void RunPart1( string Input )
         {
             Iteration = -1;
             
@@ -116,7 +116,7 @@ namespace AdventOfCode2016.Days
             return true;
         }
 
-        protected override void RunPart2( string InputFile )
+        protected override void RunPart2( string Input )
         {
             Iteration = -1;
 
